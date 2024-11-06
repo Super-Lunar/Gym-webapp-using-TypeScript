@@ -1,6 +1,9 @@
-import Navbar from "@/scenes/navbar";
 import { useEffect, useState } from "react";
+
+//
 import { SelectedPage } from "@/shared/types";
+import Navbar from "@/scenes/navbar";
+import Home from "./scenes/home";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -16,21 +19,20 @@ function App() {
       } else {
         setIsTopOfPage(false);
       }
-    }
-      window.addEventListener("scroll", handleScroll)
-      return () => {
-        window.removeEventListener("scroll",handleScroll)
-      }
-    ;
-  },[]);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="app">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
-        
       />
+      <Home setSelectedPage={setSelectedPage} />
     </div>
   );
 }
