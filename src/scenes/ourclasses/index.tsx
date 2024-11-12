@@ -46,10 +46,12 @@ const classes: Array<ClassType> = [
 ];
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
-const OurClasses = ({ setSelectedPage }: Props) => {
+const Training = ({ setSelectedPage }: Props) => {
   return (
-    <section id="ourclasses" className="w-full bg-primary-100 py-40">
-      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Classes)}>
+    <section id="training" className="w-full bg-primary-100 py-40">
+      <motion.div
+        onViewportEnter={() => setSelectedPage(SelectedPage.Training)}
+      >
         <motion.div
           className="mx-auto w-5/6"
           initial="hidden"
@@ -90,4 +92,4 @@ const OurClasses = ({ setSelectedPage }: Props) => {
   );
 };
 
-export default OurClasses;
+export default Training;
