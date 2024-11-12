@@ -23,3 +23,6 @@ https://tailwindcss.com/docs/guides/vite
 prettier for tailwindcss
 
 npm i -D prettier prettier-plugin-tailwindcss
+
+react hook form 
+npm i react-hook-form
