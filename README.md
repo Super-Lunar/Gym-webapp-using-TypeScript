@@ -26,3 +26,7 @@ npm i -D prettier prettier-plugin-tailwindcss
 
 react hook form 
 npm i react-hook-form
+
+
+Deployed at : 
+https://gym-webapp-using-type-script.vercel.app/
